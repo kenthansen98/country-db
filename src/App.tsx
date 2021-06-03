@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Wrapper } from "./App.styles";
+import Main from "./Main";
+import globe from "./3d-Earth-Globe.svg";
+import { useHistory } from "react-router";
 
-function App() {
+const App = () => {
+  const history = useHistory();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Wrapper>
+      <img className="logo" src={globe} alt="globe" onClick={() => history.push("/")}/>
+      <Main />
+    </Wrapper>
+  )
+};
 
 export default App;
