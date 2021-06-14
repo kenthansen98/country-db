@@ -1,6 +1,6 @@
 import { Wrapper } from "./App.styles";
 import Main from "./Main";
-import globe from "./3d-Earth-Globe.svg";
+import globe from "./earth.svg";
 import { useHistory } from "react-router";
 
 const App = () => {

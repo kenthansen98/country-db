@@ -7,7 +7,9 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     background-image: url(${background});
-    background-repeat: round;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 50px;
 
     .logo {
