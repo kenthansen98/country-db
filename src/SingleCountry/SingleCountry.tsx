@@ -22,6 +22,10 @@ const SingleCountry = () => {
     const [language, setLanguage] = useState("en");
     const history = useHistory();
 
+    history.listen((location, action) => {
+        window.scrollTo(0, 0);
+    });
+
     if (isLoading) {
         return (
             <div style={{ height: '100vh' }}>
@@ -53,8 +57,8 @@ const SingleCountry = () => {
             <ContentWrapper>
                 <SingleCountryTable data={data} />
                 <InnerWrapper>
-                    <Borders data={data} handleClick={handleClick} />
-                    <Map data={data}/>
+                    <Borders borders={data?.borders} handleClick={handleClick} />
+                    <Map latlng={data?.latlng} />
                 </InnerWrapper>
             </ContentWrapper>
         </Wrapper>
