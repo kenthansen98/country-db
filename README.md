@@ -1,4 +1,8 @@
-## https://country-db.netlify.app/
+# country-db
+
+A website which displays basic information about every country in the world. Countries are searchable and when clicked display an info page with a map. The site makes use of the REST countries API: https://restcountries.eu
+
+The app is deployed at: https://country-db.netlify.app/
 
 ## Available Scripts
 
